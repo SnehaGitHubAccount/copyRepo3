@@ -1,0 +1,17 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>Calculate</servlet-name>
+  	<display-name>Calculate</display-name>
+  	<description></description>
+  	<servlet-class>com.app.Calculate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Calculate</servlet-name>
+  	<url-pattern>/Calculate</url-pattern>
+  </servlet-mapping>
+</web-app>
