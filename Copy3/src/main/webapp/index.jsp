@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ page import="java.sql.*"%>
 <%@ page import ="org.apache.commons.dbcp2.BasicDataSource"%>
-<%@ page import =java.net.URI"%>
+<%@ page import ="java.net.URI"%>
 
 <html>
 <head>
