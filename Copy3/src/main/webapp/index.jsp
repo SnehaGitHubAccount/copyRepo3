@@ -30,7 +30,7 @@
 final BasicDataSource connectionPool;
 	try
 	{
-		String query="select * from product_details";
+		String query="select * from product.product_details";
 		URI dbUri = new URI(System.getenv("DATABASE_URL"));
 		  String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + dbUri.getPath();
 		  connectionPool = new BasicDataSource();
