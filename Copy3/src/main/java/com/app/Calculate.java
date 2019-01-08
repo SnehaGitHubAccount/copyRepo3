@@ -86,7 +86,9 @@ public class Calculate extends HttpServlet {
 				}
 				else
 				{
-					System.out.println("no");
+					PrintWriter out = response.getWriter();
+					out.print("<h3><font color='red'>ThisOrder Is not placed</font></h3><br> <a href='index.jsp'>Click here to Go Back</a>");
+					
 				}
 				
 			
