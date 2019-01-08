@@ -65,13 +65,13 @@ public class Calculate extends HttpServlet {
 			  System.out.println("In try");
 				
 
-				String insertTableSQL = "INSERT INTO product.`product_entry` (product_id,product_name,quantity,total_cost) VALUES(?,?,?,?)";
+				String insertTableSQL = "INSERT INTO product.`product_entry` (product_name,quantity,total_cost) VALUES(?,?,?)";
 				PreparedStatement preparedStatement = con.prepareStatement(insertTableSQL);
 				
 				for (int i=0; i<products.length; i++)
 				{
 					System.out.println(products[i] + " " + quantites[i]);
-					preparedStatement.setInt(1,4);
+					
 					preparedStatement.setString(2, products[i]);
 					preparedStatement.setInt(3, Integer.parseInt(quantites[i]));
 					preparedStatement.setInt(4,Integer.parseInt(totalamount[i]));
