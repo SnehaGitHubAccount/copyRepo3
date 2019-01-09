@@ -61,17 +61,9 @@ final BasicDataSource connectionPool;
        
         <%
 }
-	String query1="select * from salesforce.product_data__c";
-	ResultSet rrs=stmt.executeQuery(query1);
 	
 %>
-<tr>
-	   <td><input type="checkbox" name="p_check"/></td>
-	   <td><input type="text" name="p_id" value="<%out.print(rrs.getString("product_id"));%>" /></td>
-	   <td><input type="text" name="p_name" value="<%out.print(rrs.getString("product_name"));%>" /></td>
-	   <td><input type="text" name="p_price" value="<%out.print(rrs.getInt("price"));%>" /></td>
-	   <td><input type="text" name="p_quant" /></td>
-	   </tr>
+
  </table>
     <input type="submit" value="Proceed" name="process"/>
     <%
