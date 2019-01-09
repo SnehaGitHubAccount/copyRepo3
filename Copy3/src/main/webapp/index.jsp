@@ -61,14 +61,14 @@ final BasicDataSource connectionPool;
        
         <%
 }
-	rs=stmt.executeQuery(query);
+	ResultSet rrs=stmt.executeQuery(query1);
 	
 %>
 <tr>
 	   <td><input type="checkbox" name="p_check"/></td>
-	   <td><input type="text" name="p_id" value="<%out.print(rs.getString("product_id"));%>" /></td>
-	   <td><input type="text" name="p_name" value="<%out.print(rs.getString("product_name"));%>" /></td>
-	   <td><input type="text" name="p_price" value="<%out.print(rs.getInt("price"));%>" /></td>
+	   <td><input type="text" name="p_id" value="<%out.print(rrs.getString("product_id"));%>" /></td>
+	   <td><input type="text" name="p_name" value="<%out.print(rrs.getString("product_name"));%>" /></td>
+	   <td><input type="text" name="p_price" value="<%out.print(rrs.getInt("price"));%>" /></td>
 	   <td><input type="text" name="p_quant" /></td>
 	   </tr>
  </table>
