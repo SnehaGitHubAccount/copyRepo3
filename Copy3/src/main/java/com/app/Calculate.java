@@ -32,6 +32,7 @@ public class Calculate extends HttpServlet {
 	{
 		
 		try {
+			
 			/*
 			String[] totalamount = request.getParameterValues("total");
 			String[] products = request.getParameterValues("product");

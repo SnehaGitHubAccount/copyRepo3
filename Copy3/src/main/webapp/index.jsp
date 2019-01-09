@@ -31,6 +31,7 @@ final BasicDataSource connectionPool;
 	try
 	{
 		String query="select * from product.product_details";
+		String query1="select * from salesforce.product_data__c";
 		URI dbUri = new URI(System.getenv("DATABASE_URL"));
 		  String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + dbUri.getPath();
 		  connectionPool = new BasicDataSource();
@@ -60,7 +61,16 @@ final BasicDataSource connectionPool;
        
         <%
 }
+	rs=stmt.executeQuery(query);
+	
 %>
+<tr>
+	   <td><input type="checkbox" name="p_check"/></td>
+	   <td><input type="text" name="p_id" value="<%out.print(rs.getString("product_id"));%>" /></td>
+	   <td><input type="text" name="p_name" value="<%out.print(rs.getString("product_name"));%>" /></td>
+	   <td><input type="text" name="p_price" value="<%out.print(rs.getInt("price"));%>" /></td>
+	   <td><input type="text" name="p_quant" /></td>
+	   </tr>
  </table>
     <input type="submit" value="Proceed" name="process"/>
     <%
