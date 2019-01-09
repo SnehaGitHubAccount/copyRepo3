@@ -31,7 +31,7 @@ final BasicDataSource connectionPool;
 	try
 	{
 		String query="select * from product.product_details";
-		String query1="select * from salesforce.product_data__c";
+		
 		URI dbUri = new URI(System.getenv("DATABASE_URL"));
 		  String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + dbUri.getPath();
 		  connectionPool = new BasicDataSource();
@@ -61,6 +61,7 @@ final BasicDataSource connectionPool;
        
         <%
 }
+	String query1="select * from salesforce.product_data__c";
 	ResultSet rrs=stmt.executeQuery(query1);
 	
 %>

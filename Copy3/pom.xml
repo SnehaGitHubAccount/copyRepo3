@@ -66,7 +66,7 @@
 	        <artifactId>heroku-maven-plugin</artifactId>
 	        <version>0.5.1</version>
 	        <configuration>
-	        	<appName>salesforce-java-heroku-app</appName>
+	        	<appName>test-java-heroku-application</appName>
 	        </configuration>
 	        
 	    </plugin>
